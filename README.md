@@ -23,9 +23,9 @@
   4. https://tproger.ru/translations/common-javascript-interview-challenges
 
   1. Напишите функцию, которая принимает строку как аргумент и возвращает эту строку в обратном порядке.
-     /n const content = 'Привет, я Александр'
-     /n const reversContent = (data) => data.split('').reverse().join('')
-     /n console.log(reversContent(content))
+     const content = 'Привет, я Александр';
+     const reversContent = (data) => data.split('').reverse().join('');
+     console.log(reversContent(content));
 
   2. Реализуйте функцию, которая принимает массив чисел и возвращает сумму всех положительных чисел в массиве.
   
