@@ -30,10 +30,9 @@
   2. Реализуйте функцию, которая принимает массив чисел и возвращает сумму всех положительных чисел в массиве.
 const arrayPositiveNumberSum = (arr) =>
                   arr.reduce((acc, curr) => curr > 0 ? acc + curr : acc, 0)
-
   
   4. Создайте функцию, которая принимает на вход массив объектов и возвращает новый массив только с теми объектами, у которых определенное свойство имеет определенное значение.
-     const filterObj = (obj, from, before) => obj.filter((item) => item.index >= from && item.index <= before)
+     const filteredArray = (arr, from, before) => arr.filter((item) => item.index >= before && item.index <= from)
 
   5. Напишите функцию, которая принимает на вход массив строк и возвращает новый массив, содержащий только уникальные строки (без повторений).
   
