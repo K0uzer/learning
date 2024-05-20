@@ -35,6 +35,7 @@ const arrayPositiveNumberSum = (arr) =>
      const filteredArray = (arr, from, before) => arr.filter((item) => item.index >= before && item.index <= from)
 
   5. Напишите функцию, которая принимает на вход массив строк и возвращает новый массив, содержащий только уникальные строки (без повторений).
+     const arrayUniqueElementString = (arr) => [...new Set(arr.map((item) => item.toUpperCase()))]
   
   6. Реализуйте функцию, которая принимает строку и возвращает true, если строка является палиндромом, и false в противном случае.
   
