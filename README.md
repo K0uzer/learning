@@ -95,8 +95,23 @@ const arrayPositiveNumberSum = (arr) =>
   
 
   11. Реализуйте функцию, которая принимает на вход массив чисел и возвращает новый массив, содержащий только простые числа.
+
+  const isPrimeNumber = (arr) => {
+    return arr.filter((item) => {
+        for (let i = 2; i <= item; i++) {
+            if(item % i !== 0 || item === i) return item
+            else if (item % i === 0) break
+        }
+    })
+  }
+  
   
   12. Напишите функцию, которая принимает на вход две строки и возвращает true, если одна строка является анаграммой другой, и false в противном случае.
+  
+const isAnagram = (firstWord, secondWord, countCoincide) => {
+    firstWord.toLowerCase().split('').map((item) => secondWord.toLowerCase().split('').map(el => el === item ? countCoincide++ : countCoincide))
+    return countCoincide === firstWord.length ? true : false
+}
   
   13. Создайте функцию, которая принимает на вход строку и возвращает объект, содержащий количество каждого символа в строке.
   
