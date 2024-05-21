@@ -24,26 +24,26 @@
 
   1. Напишите функцию, которая принимает строку как аргумент и возвращает эту строку в обратном порядке.
 
-    const content = 'Привет, я Александр';
-    const reversContent = (data) => data.split('').reverse().join('');
-    console.log(reversContent(content));
+          const content = 'Привет, я Александр';
+          const reversContent = (data) => data.split('').reverse().join('');
+          console.log(reversContent(content));
 
   3. Реализуйте функцию, которая принимает массив чисел и возвращает сумму всех положительных чисел в массиве.
 
-    const arrayPositiveNumberSum = (arr) =>
+          const arrayPositiveNumberSum = (arr) =>
                   arr.reduce((acc, curr) => curr > 0 ? acc + curr : acc, 0)
   
   4. Создайте функцию, которая принимает на вход массив объектов и возвращает новый массив только с теми объектами, у которых определенное свойство имеет определенное значение.
 
-    const filteredArray = (arr, from, before) => arr.filter((item) => item.index >= before && item.index <= from)
+          const filteredArray = (arr, from, before) => arr.filter((item) => item.index >= before && item.index <= from)
 
   6. Напишите функцию, которая принимает на вход массив строк и возвращает новый массив, содержащий только уникальные строки (без повторений).
 
-    const arrayUniqueElementString = (arr) => [...new Set(arr.map((item) => item.toUpperCase()))]
+          const arrayUniqueElementString = (arr) => [...new Set(arr.map((item) => item.toUpperCase()))]
   
   7. Реализуйте функцию, которая принимает строку и возвращает true, если строка является палиндромом, и false в противном случае.
 
-    const isPalindrome = (word) => word.toLowerCase().split('').reverse().join('') === word.toLowerCase() ? true : false
+          const isPalindrome = (word) => word.toLowerCase().split('').reverse().join('') === word.toLowerCase() ? true : false
   
   8. Напишите алгоритм сортировки массива чисел (например, сортировка пузырьком или быстрая сортировка).
      // сортировка пузырьком
@@ -85,7 +85,7 @@
 
   9. Напишите функцию, которая принимает на вход два массива чисел и возвращает новый массив, содержащий элементы, которые есть в обоих исходных массивах.
 
-    const mergeArrays = (firstArr, secondArr) => [...firstArr, ...secondArr]
+          const mergeArrays = (firstArr, secondArr) => [...firstArr, ...secondArr]
   
   10. Создайте функцию, которая принимает на вход число и возвращает его факториал.
   
@@ -115,10 +115,10 @@
   
   12. Напишите функцию, которая принимает на вход две строки и возвращает true, если одна строка является анаграммой другой, и false в противном случае.
   
-    const isAnagram = (firstWord, secondWord, countCoincide) => {
-        firstWord.toLowerCase().split('').map((item) => secondWord.toLowerCase().split('').map(el => el === item ? countCoincide++ :             countCoincide))
-        return countCoincide === firstWord.length ? true : false
-    }
+          const isAnagram = (firstWord, secondWord, countCoincide) => {
+              firstWord.toLowerCase().split('').map((item) => secondWord.toLowerCase().split('').map(el => el === item ? countCoincide++ :             countCoincide))
+              return countCoincide === firstWord.length ? true : false
+          }
   
   13. Создайте функцию, которая принимает на вход строку и возвращает объект, содержащий количество каждого символа в строке.
 
