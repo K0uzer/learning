@@ -135,6 +135,9 @@
   
   16. Напишите функцию, которая принимает на вход два массива объектов и возвращает новый массив, содержащий объединение элементов из обоих исходных массивов (без повторений).
 
+          const getMergeFilteredArr = (arrFirst, arrSecond) => [...new Set([...arrFirst, ...arrSecond]
+                .map((item) => item.string))]
+
   17. Напишите функцию, которая принимает на вход строку и возвращает новую строку без повторяющихся символов.
 
           const getStringWithoutDuplicateLetters = (word) => word.split('').reduce((acc, curr) => acc.includes(curr) ? acc : acc = [...acc, curr], [])
