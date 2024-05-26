@@ -156,7 +156,7 @@
   
   20. Напишите функцию, которая принимает на вход массив строк и возвращает новый массив, содержащий только строки, которые начинаются с определенной буквы.
 
-          const getArrayWordStartOnlyALetter = (arr, letter) => arr.filter(item => item.split('')[0] === letter)
+          const getArrayWordStartOnlyALetter = (arr, letter) => arr.filter(item => item.split('').shift() === letter)
   
   22. Создайте функцию, которая принимает два числа и возвращает их наибольший общий делитель.
 
