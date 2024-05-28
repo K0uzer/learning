@@ -93,11 +93,7 @@
           const searchFactorial = (num) =>
           {
               let resolve = 0
-              for (let i = 1; i <= num; i++)
-              {
-                  resolve === 0 ? resolve = i * ++resolve : resolve = i * resolve
-                  console.log(resolve)
-              }
+              for (let i = 1; i <= num; i++) resolve === 0 ? resolve = i * ++resolve : resolve = i * resolve
               return resolve
           }
   
@@ -195,7 +191,7 @@
   
   28. Напишите функцию, которая принимает на вход две строки и возвращает true, если они являются анаграммами (содержат одни и те же символы в разном порядке), и false в противном случае.
 
-    
+          
   
   29. Реализуйте функцию, которая принимает на вход массив строк и возвращает новый массив, содержащий только строки, длина которых больше заданного числа.
   
