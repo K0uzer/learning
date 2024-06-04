@@ -383,12 +383,21 @@
 
 
   47. Создайте Promise, который успешно завершится через 2 секунды.
+
+          const promise = new Promise((resolve) => setTimeout(resolve('done'), 2000)).then(data => console.log(data))
  
   48. Создайте Promise, который будет отклонен через 1 секунду.
+
+          const promise = new Promise((resolve, reject) => setTimeout(reject('done'), 1000)).then(data => console.log(data))
+          promise.catch((error) => console.log(error))  
  
   49. Создайте функцию, которая будет возвращать Promise с рандомным числом и после выполнения Promise выведет это число.
+
+          const promise = new Promise((resolve, reject) => resolve((Math.random(0,1)).toFixed(1) * 10)).then(data => console.log(data))
   
   50. Напишите код, который реализует выполнение двух Promise параллельно и выведет результат, когда оба Promise завершатся.
+
+          
   
   51. Реализуйте функцию, которая будет возвращать Promise и будет выполняться через случайное время.
   
