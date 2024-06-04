@@ -351,7 +351,36 @@
   46. Задача "Реализация Promise.all()":
      Напишите свою собственную функцию, которая реализует функционал Promise.all(), принимая массив промисов и возвращая промис, который разрешится, когда все промисы из массива разрешатся.
 
+          function customPromiseAll(promises) {
+            return new Promise((resolve, reject) => {
+                let results = [];
+                let completed = 0;
+                
+                promises.forEach((promise, index) => {
+                    promise.then(result => {
+                        results[index] = result;
+                        completed++;
+                        
+                        if (completed === promises.length) {
+                            resolve(results);
+                        }
+                    }).catch(error => reject(error));
+                });
+            });
+          }
+    
+          // Пример использования
+          const promise1 = new Promise((resolve) => setTimeout(() => resolve(1), 1000));
+          const promise2 = new Promise((resolve) => setTimeout(() => resolve(2), 2000));
           
+          customPromiseAll([promise1, promise2])
+              .then(results => {
+                  console.log(results); // [1, 2]
+              })
+              .catch(error => {
+                  console.error(error);
+              });
+
 
   47. Создайте Promise, который успешно завершится через 2 секунды.
  
