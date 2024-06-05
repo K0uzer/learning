@@ -16,7 +16,7 @@
   2. https://github.com/likezninjaz/react-ru-interview-questions
   3. https://dev.to/sakhnyuk/300-react-interview-questions-2ko4
 
-  ##Задачи для собеса JS:
+  ##Список задач для подготовки (JS):
   1. https://purpleschool.ru/blog/pyat-zadach-dlya-javascript-razrabotchikov
   2. https://dev-station.ru/categories/js/taskbook/js-interview-tasks
   3. https://github.com/js-tasks-ru/js-coding-interview
