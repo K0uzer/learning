@@ -397,9 +397,17 @@
   
   50. Напишите код, который реализует выполнение двух Promise параллельно и выведет результат, когда оба Promise завершатся.
 
+          const promise1 = new Promise((resolve, reject) => resolve((Math.random(0,1)).toFixed(1) * 10)).then(data => console.log(data))
+
+          const promise2 = new Promise((resolve, reject) => resolve((Math.random(0, 1)).toFixed(1) * 10)).then(data => console.log(data))
           
+          const promAll = [promise1, promise2]
+          
+          Promise.all(promAll).then(data => data)
   
   51. Реализуйте функцию, которая будет возвращать Promise и будет выполняться через случайное время.
+
+          
   
   52. Создайте Promise, который будет завершать выполнение через 3 секунды с определенным результатом.
   
