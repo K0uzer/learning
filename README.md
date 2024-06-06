@@ -409,7 +409,11 @@
   
   51. Реализуйте функцию, которая будет возвращать Promise и будет выполняться через случайное время.
 
-          
+          function getPromise() {
+            return new Promise((resolve) => setTimeout(() => resolve('done'), (Math.random()).toFixed(2) * 1000))
+          }
+
+          getPromise().then(data => console.log(data))
   
   52. Создайте Promise, который будет завершать выполнение через 3 секунды с определенным результатом.
   
