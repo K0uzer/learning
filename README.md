@@ -416,12 +416,27 @@
           getPromise().then(data => console.log(data))
   
   52. Создайте Promise, который будет завершать выполнение через 3 секунды с определенным результатом.
+
+          const prom = () => new Promise((resolve) => resolve('ok')).then((data) => console.log(data))
   
   53. Напишите функцию, которая принимает Promise и возвращает новый Promise, который будет отклонен через 2 секунды.
+
+          function rejectAfterTwoSeconds(promise) {
+            return new Promise((resolve, reject) => {
+              setTimeout(() => {
+                reject('no');
+              }, 2000);
+            });
+          }
+
   
   54. Реализуйте Promise, который будет выполняться бесконечное время каждые 2 секунды.
+
+          const prom = (pr) => new Promise((resolve, reject) => resolve('ok')).then((data) => setInterval(() => console.log(data), 2000))
   
   55. Напишите функцию, которая будет принимать массив Promise и возвращать новый Promise, который завершится, когда все Promise в массиве выполнены.
+
+          
   
   56. Создайте Promise, который будет отклонен после 5 попыток.
   
