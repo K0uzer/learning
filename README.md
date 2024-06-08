@@ -436,9 +436,26 @@
   
   55. Напишите функцию, которая будет принимать массив Promise и возвращать новый Promise, который завершится, когда все Promise в массиве выполнены.
 
-          
+          const getNewPromise = (arrPromise) => Promise.all(arrPromise)
+          getNewPromise(arr).then(data => console.log(data))
   
   56. Создайте Promise, который будет отклонен после 5 попыток.
+
+          const getNewPromise = () =>
+          {
+              return new Promise((resolve, reject) =>
+              {
+                  let count = 0
+                  while(count === 5) {
+                      count++
+                  }
+                  reject('No')
+              })
+          }
+          
+          getNewPromise()
+              .then(result => console.log(result))
+              .catch(err => console.error(err))
   
   57. Напишите код, который будет принимать Promise и перехватывать ошибку, если ее нет.
   
