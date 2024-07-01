@@ -101,12 +101,13 @@
   12. Реализуйте функцию, которая принимает на вход массив чисел и возвращает новый массив, содержащий только простые числа.
 
           const isPrimeNumber = (arr) => {
-            return arr.filter((item) => {
-                for (let i = 2; i <= item; i++) {
-                    if(item % i !== 0 || item === i) return item
-                    else if (item % i === 0) break
-                }
-            })
+              return arr.filter((item) => {
+                  if (item <= 1) return false; // 0 и 1 не являются простыми числами
+                  for (let i = 2; i * i <= item; i++) { // Проверка до корня из item
+                      if (item % i === 0) return false; // Если делится без остатка, не простое
+                  }
+                  return true; // Если не делится ни на одно число от 2 до sqrt(item), то простое
+              });
           }
   
   
