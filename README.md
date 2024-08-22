@@ -574,12 +574,48 @@
   
   8. Задача "Поиск наибольшего общего делителя":
      Напишите функцию, которая принимает два числа и возвращает их наибольший общий делитель.
+
+          const getMaxCommuningDivisor = (numberFirst, numberSecond) => {
+          let maxDivisor = 0
+          for (let i = Math.min(numberFirst, numberSecond); i >= 1; i--) {
+            if (numberFirst % i === 0 && numberSecond % i === 0) {
+              maxDivisor = i
+              break
+            }
+          }
+          return maxDivisor
+          }
   
   9. Задача "Фибоначчиева последовательность":
      Напишите функцию, которая возвращает n-ное число в последовательности Фибоначчи.
-  
+
+    const getNumberFibonacci = (quantityIteration) => {
+        if(!quantityIteration) return 0
+        if(quantityIteration === 1) return 1
+        return getNumberFibonacci(quantityIteration-1) + getNumberFibonacci(quantityIteration-2)
+    }
+
+    console.log(getNumberFibonacci(10))
+    
   10. Задача "Отсортировать массив 0 и 1":
      Напишите функцию, которая принимает массив, содержащий только числа 0 и 1, и возвращает этот массив, отсортированный по возрастанию.
+
+    const arr = [0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0]
+
+    const getFulterArr = (array) => {
+      const zeros = []
+      const ones = []
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === 0) {
+          zeros.push(array[i])
+        } else {
+          ones.push(array[i])
+        }
+      }
+      return zeros.concat(ones)
+    }
+    
+    console.log(getFulterArr(arr))
   
   11. Задача "Расстановка ферзей на шахматной доске":
       Напишите функцию, которая решает задачу о расстановке восьми ферзей на шахматной доске, чтобы они не били друг друга.
