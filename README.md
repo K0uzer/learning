@@ -1,6 +1,6 @@
 # learning
 
-### Список ссылок с вопросами для собеседования
+### Список ссылок с вопросами
 
   ##JS:
   1. https://hackr.io/blog/javascript-interview-questions
